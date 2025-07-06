@@ -188,6 +188,5 @@ $$
 ## Acknowledgement
 感谢 2024级黄佳瑞，2024级刘宇轩以及2024级ACM王越天，他们对这个项目的IDEA、代码框架、评分标准、平台的可移植性、压力测试上提供了许多宝贵的建议，特此感谢。
     
-鄙人才疏学浅，对于各种细节懒得深究，如果对于文档中出现的问题或者建议，劳驾各位高抬贵手发送至`logic_1729@sjtu.edu.cn`,还请各位多多指教QAQ
-    
-$\phantom{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}$                                            ——2025.07.06 $\mathrm{by\ PhantomPhoenix}$
+鄙人才疏学浅，对于各种细节懒得深究，如果对于文档中出现的问题或者建议，劳驾各位高抬贵手发送至`logic_1729@sjtu.edu.cn`,还请各位多多指教                             
+                                                                                                              ——2025.07.06 $\mathrm{by\ PhantomPhoenix}$
