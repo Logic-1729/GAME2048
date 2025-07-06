@@ -170,8 +170,8 @@ $$
 \begin{cases}
 0, & \text{score} < 1000 \\\\
 \left\lceil \dfrac{score^2}{2 \times 10^5} \right\rceil + 30, & 1000 \leq score < 3000 \quad (35\text{-}75\text{ pts}) \\\\
-\left\lceil 12.27 \log_2\left(\dfrac{score}{1000}\right) \right\rceil + 55.55, & 3000 \leq score < 8000 \quad (75\text{-}93\text{ pts}) \\\\
-\min \left( \left\lceil 42.92 \sqrt{ \log_2 \left( \dfrac{score}{1000} \right) } \right\rceil + 18.16, 110 \right), & score \geq 8000 \quad (93\text{-}110\text{ pts})
+\left\lceil 12.27 \log_2\left(\dfrac{score}{1000}\right)  + 55.55\right\rceil, & 3000 \leq score < 8000 \quad (75\text{-}93\text{ pts}) \\\\
+\min \left( \left\lceil 42.92 \sqrt{ \log_2 \left( \dfrac{score}{1000} \right) }  + 18.16\right\rceil, 110 \right), & score \geq 8000 \quad (93\text{-}110\text{ pts})
 \end{cases}
 $$
 
