@@ -8,7 +8,7 @@
 
 ## 项目框架
 
-目前已经实现了这个项目的大致结构，你只需要完成 $\mathrm{Game2048}\_\mathrm{Logic.cpp}$，其中可能用到的常量、变量与函数可以参见 $\mathrm{Game2048\_Logic.h}$。为了方便各位熟悉与调试，仓库根目录里的 $\mathrm{example.zip}$ 里有一个实现所有功能后的 2048.exe 来帮助各位熟悉键位与操作,以便你在本地测试自己的 2048.exe 是否正确。
+目前已经实现了这个项目的大致结构，你只需要完成 `Game2048_Logic.cpp`，其中可能用到的常量、变量与函数可以参见 `Game2048_Logic.h`。为了方便各位熟悉与调试，仓库根目录里的 `example.zip` 里有一个实现所有功能后的 2048.exe 来帮助各位熟悉键位与操作,以便你在本地测试自己的 2048.exe 是否正确。
 
 ### 代码实现
 
@@ -37,7 +37,7 @@ Game2048/
 └── test.sh                       # 性能测试脚本
 ```
 
-我们已经实现这个2048小游戏的 GUI 前端，你所需要完成的 $\mathrm{Game2048\_Logic.cpp}$ 只包括这个2048游戏的主要运行逻辑，并完善 HINT 的功能。
+我们已经实现这个2048小游戏的 GUI 前端，你所需要完成的 `Game2048_Logic.cpp` 只包括这个2048游戏的主要运行逻辑，并完善 HINT 的功能。
 
 ## 基础任务
 
@@ -57,7 +57,7 @@ Game2048/
 > 5.3. 若不能够进行有效移动，则游戏结束，此时的得分为最终得分。  
 > 5.4. 若某一时刻，棋盘上出现了2048，则游戏提前结束，并统计得分。
 
-为此，你需要实现 $\mathrm{Game2048\_Logic.cpp}$ 中的以下函数：
+为此，你需要实现 `Game2048_Logic.cpp` 中的以下函数：
 
 ```
 Game2048Logic::Game2048Logic() {}
@@ -78,7 +78,7 @@ void Game2048Logic::CopyBoard(std::array<std::array<unsigned int, 4>, 4>& dest,
                         const std::array<std::array<unsigned int, 4>, 4>& src) const {}
 ```
 
-除此之外，我们需要你支持撤销操作，为此你需要实现 $\mathrm{Game2048\_Logic.cpp}$ 中的以下函数：
+除此之外，我们需要你支持撤销操作，为此你需要实现 `Game2048_Logic.cpp` 中的以下函数：
 
 ``` 
 void Game2048Logic::Redo() {}
@@ -86,15 +86,15 @@ void Game2048Logic::Redo() {}
 void Game2048Logic::SaveRecord() {}
 ```
 
-在实现撤销操作的过程中，请注意一些显而易见的细节，比如新建的游戏不可执行撤销操作，但是在死局之后执行的新建操作可以被执行；再比如撤销操作不可被无限次执行，这些细节详见 $\mathrm{Game2048\_Logic.h}$。
+在实现撤销操作的过程中，请注意一些显而易见的细节，比如新建的游戏不可执行撤销操作，但是在死局之后执行的新建操作可以被执行；再比如撤销操作不可被无限次执行，这些细节详见 `Game2048_Logic.h`。
 
-除此之外，我们还提供了 $\mathrm{Game2048Logic::ChooseDirection()}$ 与 $\mathrm{Game2048Logic::Hint()}$，在基础任务部分，你无需对他们进行修改。
+除此之外，我们还提供了 `Game2048Logic::ChooseDirection()` 与 `Game2048Logic::Hint()`，在基础任务部分，你无需对他们进行修改。
 
 ## 拓展任务
 
-在这一板块中，你需要优化 $\mathrm{Game2048Logic::Hint()}$，这一函数的效果是仿照人工~~智障~~智能来帮助人更好地进行决策。但现在给出的 $\mathrm{Game2048Logic::Hint()}$ 函数实现的效果是随机朝四个方向移动，这样做的得分效率显然比较低下，也几乎不可能通关。
+在这一板块中，你需要优化 `Game2048Logic::Hint()`，这一函数的效果是仿照人工~~智障~~智能来帮助人更好地进行决策。但现在给出的 `Game2048Logic::Hint()` 函数实现的效果是随机朝四个方向移动，这样做的得分效率显然比较低下，也几乎不可能通关。
 
-为此，请你优化 $\mathrm{Game2048Logic::Hint()}$ 函数，获取更高的平均得分。为了保证 test.sh 能够正常运行，请保证在 Hint() 函数的功能不变的前提下添加任意辅助函数或者头文件。注意你无需给出必胜决策/最优决策，你只要做一些更 optimal 的调整即可，比如：
+为此，请你优化 `Game2048Logic::Hint()` 函数，获取更高的平均得分。为了保证 test.sh 能够正常运行，请保证在 Hint() 函数的功能不变的前提下添加任意辅助函数或者头文件。注意你无需给出必胜决策/最优决策，你只要做一些更 optimal 的调整即可，比如：
 
 ```
 1. 按照下 > 左 > 右 > 上的优先级对棋盘进行操作
@@ -130,7 +130,7 @@ sudo apt install -y mingw-w64     # 安装Windows API有关的库
 sudo apt install wine             # Windows系统下可跳过
 ```
 
-对于 Basic 部分而言，请你在完成 Game2048_Logic.cpp 之后打开 wsl 的根目录，依次执行以下命令：
+对于 Basic 部分而言，请你在完成 `Game2048_Logic.cpp` 之后打开 wsl 的根目录，依次执行以下命令：
 
 ```
 cd Game2048         # 如果当前目录已在Game2048下可跳过
@@ -146,7 +146,7 @@ wine 2048.exe       # Windows系统可手动打开bin/2048.exe
 
 然后你就能看到你的 2048.exe 运行；
 
-对于 Extension 部分而言，请你在完成 Game2048_Logic.cpp 中的 Hint 之后，打开 wsl 的根目录，依次执行以下命令：（注意在这一阶段无需执行 Basic 部分的编译，脚本中包含了编译错误的检查）
+对于 Extension 部分而言，请你在完成 `Game2048_Logic.cpp` 中的 Hint 之后，打开 wsl 的根目录，依次执行以下命令：（注意在这一阶段无需执行 Basic 部分的编译，脚本中包含了编译错误的检查）
 
 ```
 cd Game2048         # 如果当前目录已在Game2048下可跳过
@@ -190,4 +190,4 @@ $$
     
 鄙人才疏学浅，对于各种细节懒得深究，如果对于文档中出现的问题或者建议，劳驾各位高抬贵手发送至`logic_1729@sjtu.edu.cn`,还请各位多多指教QAQ
     
-$\phantom{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}$                                            ——2025.04.06 $\mathrm{by\ PhantomPhoenix}$
+$\phantom{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}$                                            ——2025.07.06 $\mathrm{by\ PhantomPhoenix}$
